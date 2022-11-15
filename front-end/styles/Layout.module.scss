@@ -1,29 +1,42 @@
-//components/Layout.scss
-//for gloab
+// components/Layout.scss
 
-.Layout{
-    flex:1;
-    flex-direction:column;
-    background-color:inherit;
-    //background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.493)),url("/img/dontthink.jpg");
+@import "../theme/theme";
 
-    content{
-        flex:1;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        color:inherit;
-        font-family: 'Courier New', Courier, monospace;
 
-        a{
-            color:inherit;
-        }
+.Layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // background-color:black;
+  background-color: inherit;
+
+  .Content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background: $secondary;
+    //color: $on-secondary;
+    color: #222222;
+    font-family: $core-font;
+
+    a {
+      color: inherit;
+    }
+  }
+}
+//meadia queries
+
+@media screen and (max-width: 768px) {
+  /* .Layout{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+
+    .Content{
+      display:block;
     }
 
-}
-
-//media queries
-
-@media screen and (max-width:768px){
-    
+  }
+   */
 }

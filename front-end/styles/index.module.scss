@@ -1,0 +1,462 @@
+// pages/index.scss
+@import "../theme/theme";
+
+
+
+/*----------------------main-----*/
+
+
+.wrapper{
+  position: relative;
+  width:100%;
+  //height: 100vh;
+}
+.module_header{
+  position: relative;
+  display: block;
+  width: 100%;
+  height:4rem;
+  padding-top: 1rem;
+  //background-color: red;
+}
+.logo{
+  margin: auto;
+  width: 16rem;
+
+}
+.module_promo{
+  display: flex;
+  gap:1rem;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+  height:600px;
+  //padding: 3rem 3rem 0rem;
+  padding: 3rem;
+  
+}
+.one{
+  background-color: green;
+  width:30%;
+  height: 24rem;
+  padding: 2rem;
+}
+.intro_more {
+  background-color: black;
+  color: white;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  width: 12rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.intro_wrapper{
+  display: flex;
+  gap:1rem;
+  align-items: flex-start;
+  justify-content: center;
+  width: 70%;
+  height:30rem;
+
+}
+.two{
+  width:50%;
+  height:30rem;
+  background-color: yellow;
+}
+.three{
+  background-color: blue;
+  width:50%;
+  height: 30rem;
+  
+}
+
+.advert1_wrapper{
+  display: block;
+  height:400px;
+  width: 100%;
+  padding-top:1rem;
+  background-color: black;
+
+}
+.h1_advert1{
+  margin:2rem auto 2rem;
+  text-align: center;
+  color: white;
+  text-transform:capitalize;
+}
+.advert1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: auto;
+
+}
+.circle1{
+  height: 14rem;
+  width: 14rem;
+  border-radius: 100%;
+  background-color: antiquewhite;
+}
+.circle2{
+  height: 14rem;
+  width: 14rem;
+  border-radius: 100%;
+  background-color: antiquewhite;
+}
+.circle3{
+  height: 14rem;
+  width: 14rem;
+  border-radius: 100%;
+  background-color: antiquewhite;
+}
+
+/*------------------------------------------------------------------------------------------------------
+-
+----------------------------mental health section---------------------------------------------------------
+
+-------------------------------------------------------------------------------------------*/
+.mentalHealth{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height:600px;
+  width: 100%;
+  background-color: green;
+}
+.box1_1{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+
+.box1_2{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+.box1_3{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+
+.advert2_wrapper{
+  display: block;
+  height:400px;
+  width: 100%;
+  padding-top:1rem;
+  background-color: black;
+}
+.h1_advert2{
+  margin:2rem auto 2rem;
+  text-align: center;
+  color: white;
+  text-transform:capitalize;
+}
+.advert2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+}
+.circle1_1{
+  height: 14rem;
+  width: 14rem;
+  border-radius: 100%;
+  background-color: antiquewhite;
+}
+.circle2_1{
+  height: 14rem;
+  width: 14rem;
+  border-radius: 100%;
+  background-color: antiquewhite;
+}
+.circle3_1{
+  height: 14rem;
+  width: 14rem;
+  border-radius: 100%;
+  background-color: antiquewhite;
+}
+
+
+/*------------------------------------------------------------------------------------------------------
+-
+-----------------------lifestyle section -----------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------*/
+
+.lifestyle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height:600px;
+  width: 100%;
+  background-color: yellow;
+}
+.box2_1{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+.box2_2{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+.box2_3{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+.advert3{
+  display: block;
+  height:460px;
+  width: 100%;
+  padding-top:1rem;
+  background-color: black;
+}
+.h1_advert3{
+  margin:2rem auto 2rem;
+  text-align: center;
+  color: white;
+  text-transform:capitalize;
+}
+.rect1{
+  height: 18rem;
+  width:36rem;
+  margin: auto;
+  background-color: antiquewhite;
+}
+/*      end lifestyle section  -----------------------------------------*/
+/*--------------------------------------------------------------------------
+
+------------------foodRecipe section----------------------------------------
+
+---------------------------------------------------------------------------*/
+
+.foodRecipe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height:600px;
+  width: 100%;
+  background-color: blue;
+}
+.box3_1{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+.box3_2{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+.box3_3{
+  height:30rem;
+  width:30%;
+  background-color: antiquewhite;
+}
+/*---------------------------end foodrecipe section----------------------------------------
+------------------------------------------------------------------------------------------*/
+
+
+/*-------media querries----*/
+
+@media (max-width: 600px) {
+  
+  .wrapper{
+    position: relative;
+    width:100%;
+    //height: 100vh;
+  }
+  .module_header{
+    padding-top: 0.5rem;
+  }
+
+
+  .module_promo{
+    position: relative;
+    flex-direction: column;
+    margin: auto;
+    margin-top:2rem;
+    width: 90%;
+    height:fit-content;
+    //padding: 3rem 3rem 0rem;
+    padding: 0rem; 
+    padding-bottom:2rem; 
+  }
+  .one{
+    width:100%;
+    height: 24rem;
+    padding: 8%;
+  }
+  .intro_more {
+    text-transform: uppercase;
+  }
+  .intro_wrapper{
+    flex-direction: column;
+    width: 100%;
+    height:30rem;
+    margin: auto; 
+  }
+  .two{
+    width:100%;
+    height:30rem;
+    margin: auto;
+  }
+  .three{
+    width:100%;
+    height: 30rem;
+    margin: auto;
+    
+  }
+  
+  .advert1_wrapper{
+    height:max-content;
+  
+  }
+
+  .advert1{
+   flex-wrap: wrap;
+    gap: 0.5em;
+  
+  }
+  .circle1{
+    height: 8em;
+    width: 8em;
+  }
+  .circle2{
+    height: 8rem;
+    width: 8rem;
+  }
+  .circle3{
+    height: 8rem;
+    width: 8rem;
+  
+  }
+  /*--------------------------------------------------------------------------------------------------
+  --------------------------------------------------------------------------------------------------
+-
+----------------------------mental health section---------------------------------------------------------
+
+-------------------------------------------------------------------------------------------*/
+.mentalHealth{
+  flex-direction: column;
+  height:max-content;
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0 2rem;
+}
+.box1_1{
+  height:30rem;
+  width:100%;
+}
+
+.box1_2{
+  height:30rem;
+  width:100%; 
+}
+.box1_3{
+  height:30rem;
+  width:100%;
+}
+
+.advert2_wrapper{
+  height:max-content;
+  padding-bottom: 2rem;
+}
+.advert2{
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+}
+.circle1_1{
+  height: 8rem;
+  width: 8rem;
+}
+.circle2_1{
+  height: 8rem;
+  width: 8rem;
+ 
+}
+.circle3_1{
+  height: 8rem;
+  width: 8rem;
+}
+
+
+/*------------------------------------------------------------------------------------------------------
+-
+-----------------------lifestyle section -----------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------*/
+
+.lifestyle{
+  flex-direction: column;
+  height:max-content;
+  width: 90%;
+  margin: auto;
+}
+.box2_1{
+  width: 100%;
+}
+.box2_2{
+  width:100%;
+}
+.box2_3{
+  width:100%;
+}
+.advert3{
+  height:max-content;
+  padding-bottom: 2rem;
+}
+.rect1{
+  height: 10rem;
+  width:20rem;
+  margin: auto;
+  background-color: red;
+}
+/*      end lifestyle section  -----------------------------------------*/
+/*--------------------------------------------------------------------------
+
+------------------foodRecipe section----------------------------------------
+
+---------------------------------------------------------------------------*/
+
+.foodRecipe{
+  flex-direction: column;
+  height:max-content;
+  width: 90%;
+  margin: auto;
+}
+.box3_1{
+  width:100%;
+}
+.box3_2{
+  width:100%;
+}
+.box3_3{
+  width:100%;
+}
+/*---------------------------end foodrecipe section----------------------------------------
+------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+  
+}
