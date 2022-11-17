@@ -20,7 +20,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
     <div className={styles.wrapper}>
       <section className={styles.module_header}>
       <div className={styles.logo}>
-      <img src="/sincerely.svg" alt="logo" />
+      <img src="/logo.png" alt="logo" />
       </div>
       <div className={styles.hook}></div>
       </section>
@@ -32,23 +32,23 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
           <div className={styles.intro_more}>all recent posts &nbsp; ➔</div>
         </div>
         <div className={styles.intro_wrapper}>
-        {newPost.length > 0 && newPost.map(({slug="",mainImage="",publishedAt="",title="",body="",authorName="",authorImage="",index }) => (
-            <div onClick={() => router.push(`/post/${slug}`)} key={index} className={styles.post}>
-              <img className={styles.mainImage} src={urlFor(mainImage)} alt="no image" />
+        {newPost.length ? newPost.map((p,index) => (
+            <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.post}>
+              <img className={styles.mainImage} src={urlFor(p.mainImage)} alt="no image" />
               <div className={styles.avatar_date}>
-              <Avatar name={authorName} picture={urlFor(authorImage)}/>
-              <Date dateString={publishedAt}/>
+              <Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>
+              <Date dateString={p.publishedAt}/>
               </div>
 
-              <h3 className={styles.post_title}>{title}</h3>
+              <h3 className={styles.post_title}>{p.title}</h3>
               <div className={styles.box}>
                 <input type="checkbox" className={styles.expanded} />
-              <div className={styles.blocks}><BlockContent blocks={body} /></div>
+              <div className={styles.blocks}><BlockContent blocks={p.body} /></div>
               <label htmlFor="expanded"
               role="button">read more ...</label>
               </div>
             </div>
-          )) }
+          )) : <div className={styles.noPost}></div>}
         </div>
 
       </section>
@@ -62,7 +62,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       </section>
       <section className={styles.mentalHealth}>
       {mentalHealth.length > 0 && mentalHealth.map(({slug="",mainImage="",publishedAt="",title="",body="",authorName="",authorImage="",index }) => (
-            <div onClick={() => router.push(`/post/${slug}`)} key={index} className={styles.mental_post}>
+            <div onClick={() => Router.push(`/post/${slug}`)} key={index} className={styles.mental_post}>
               <img className={styles.mainImage} src={urlFor(mainImage)} alt="no image" />
               <div className={styles.avatar_date}>
               <Avatar name={authorName} picture={urlFor(authorImage)}/>
@@ -91,7 +91,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       </section>
       <section className={styles.lifestyle}>
       {lifestyle.length > 0 && lifestyle.map(({slug="",mainImage="",publishedAt="",title="",body="",authorName="",authorImage="",index }) => (
-            <div onClick={() => router.push(`/post/${slug}`)} key={index} className={styles.lifestyle_post}>
+            <div onClick={() => Router.push(`/post/${slug}`)} key={index} className={styles.lifestyle_post}>
               <img className={styles.mainImage} src={urlFor(mainImage)} alt="no image" />
               <div className={styles.avatar_date}>
               <Avatar name={authorName} picture={urlFor(authorImage)}/>
@@ -114,7 +114,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       </section>
       <section className={styles.foodRecipe}>
       {foodRecipe.length > 0 && foodRecipe.map(({slug="",mainImage="",publishedAt="",title="",body="",authorName="",authorImage="",index }) => (
-            <div onClick={() => router.push(`/post/${slug}`)} key={index} className={styles.food_post}>
+            <div onClick={() => Router.push(`/post/${slug}`)} key={index} className={styles.food_post}>
               <img className={styles.mainImage} src={urlFor(mainImage)} alt="no image" />
               <div className={styles.avatar_date}>
               <Avatar name={authorName} picture={urlFor(authorImage)}/>
@@ -128,6 +128,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
               role="button">read more ...</label>
               </div>
             </div>
+            
           )) }
           
       </section>
@@ -154,17 +155,19 @@ const client = createClient({
     function urlFor(source) {
         return builder.image(source);
     }
+
     
 
   
 
 export async function getStaticProps() {
-    const newPost = await client.fetch(`*[_type == "post"][0...3]{title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
+    const newPost = await client.fetch(`*[_type == "post"][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
     const mentalHealth = await client.fetch(`*["mental_health" in categories[]->title][0...3]{title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
     const lifestyle = await client.fetch(`*["lifestyle" in categories[]->title][0...3]{title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
     const foodRecipe = await client.fetch(`*["food_recipe" in categories[]->title][0...3]{title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
   
     return {
+        
       props: {
         newPost,
         mentalHealth,
