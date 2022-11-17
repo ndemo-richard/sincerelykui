@@ -72,29 +72,39 @@
   max-width: calc(100vw - 50px);
  // box-shadow: 2px 2px 10px #246756;
  // border-radius: 25px;
+ h4{
+  font-size: 0.7rem;
+  font-family: 'Yusei Magic', sans-serif;
+  color: #ee6677;
+}
 
-  h4{
-    font-size: 0.7rem;
-    font-family: 'Yusei Magic', sans-serif;
-    color: #ee6677;
-  }
-  .post_title{
-    font-weight: 900;
-    font-family: 'Playfair Display', serif;
-    text-transform: capitalize;
-    color:#50505a;
-    font-size: 1.5rem;
-  }
+ 
+
+}
+
+.post_title{
+  font-weight: 900;
+  font-family: 'Playfair Display', serif;
+  text-transform: capitalize;
+  color:#50505a;
+  font-size: 1.4rem;
+  line-height: 1;
+  height: 3rem;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 1rem;
+
+}
 .blocks{
   font-family: 'Yusei Magic', sans-serif;
   color:#444444;
   width:100%;
-  height: 150px;
   font-size: 1em;
+  line-height: 1;
   overflow: hidden;
-  margin: 0;
+  display: block;
+  height: 6rem;
 
-}
 }
 .avatar_date{
   display: flex;
@@ -103,6 +113,7 @@
 }
 .mainImage {
 width: 100%;
+height: 14rem;
 transition: 0.2s;
 border-radius: 25px;
 }
@@ -211,32 +222,27 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
 
 -------------------------------------------------------------------------------------------*/
 .mentalHealth{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   height:600px;
   width: 100%;
-  background-color: green;
+  padding: 0 2rem 0;
 }
-.box1_1{
+.mental_post{
+  max-width: calc(100vw - 50px);
   height:30rem;
   width:30%;
   background-color: antiquewhite;
+
+
 }
 
-.box1_2{
-  height:30rem;
-  width:30%;
-  background-color: antiquewhite;
-}
-.box1_3{
-  height:30rem;
-  width:30%;
-  background-color: antiquewhite;
-}
 
 .advert2_wrapper{
+  position: relative;
   display: block;
   height:400px;
   width: 100%;
@@ -283,30 +289,25 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
 -----------------------------------------------------------------------------------------------------*/
 
 .lifestyle{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   height:600px;
   width: 100%;
-  background-color: yellow;
+  padding: 0 2rem 0;
 }
-.box2_1{
+.lifestyle_post{
+  max-width: calc(100vw - 50px);
   height:30rem;
   width:30%;
   background-color: antiquewhite;
+
 }
-.box2_2{
-  height:30rem;
-  width:30%;
-  background-color: antiquewhite;
-}
-.box2_3{
-  height:30rem;
-  width:30%;
-  background-color: antiquewhite;
-}
+
 .advert3{
+  position: relative;
   display: block;
   height:460px;
   width: 100%;
@@ -333,29 +334,23 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
 ---------------------------------------------------------------------------*/
 
 .foodRecipe{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   height:600px;
   width: 100%;
-  background-color: blue;
+ 
 }
-.box3_1{
+.food_post{
+  max-width: calc(100vw - 50px);
   height:30rem;
   width:30%;
   background-color: antiquewhite;
+
 }
-.box3_2{
-  height:30rem;
-  width:30%;
-  background-color: antiquewhite;
-}
-.box3_3{
-  height:30rem;
-  width:30%;
-  background-color: antiquewhite;
-}
+
 /*---------------------------end foodrecipe section----------------------------------------
 ------------------------------------------------------------------------------------------*/
 
@@ -454,19 +449,18 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   margin: auto;
   padding: 2rem 0 2rem;
 }
-.box1_1{
-  height:30rem;
+.mental_post{
   width:100%;
+    height:30rem;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+    max-width: calc(100vw - 50px);
+    box-shadow: none;
+    border-radius: 0;
 }
 
-.box1_2{
-  height:30rem;
-  width:100%; 
-}
-.box1_3{
-  height:30rem;
-  width:100%;
-}
+
 
 .advert2_wrapper{
   height:max-content;
@@ -503,15 +497,17 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   height:max-content;
   width: 90%;
   margin: auto;
+  padding: 0;
 }
-.box2_1{
-  width: 100%;
-}
-.box2_2{
+.lifestyle_post{
   width:100%;
-}
-.box2_3{
-  width:100%;
+  height:30rem;
+  margin: auto;
+  cursor: pointer;
+  text-align: center;
+  max-width: calc(100vw - 50px);
+  box-shadow: none;
+  border-radius: 0;
 }
 .advert3{
   height:max-content;
@@ -536,24 +532,17 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   width: 90%;
   margin: auto;
 }
-.box3_1{
+.food_post{
   width:100%;
-}
-.box3_2{
-  width:100%;
-}
-.box3_3{
-  width:100%;
+    height:30rem;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+    max-width: calc(100vw - 50px);
+    box-shadow: none;
+    border-radius: 0;
 }
 /*---------------------------end foodrecipe section----------------------------------------
 ------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
   
 }

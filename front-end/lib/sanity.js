@@ -4,7 +4,7 @@ import sanityImage from '@sanity/image-url'
 const options = {
   // Find your project ID and dataset in `sanity.json` in your studio project
   dataset: 'production',
-  projectId: 'om0uizd8',
+  projectId: 'ogthfjsu',
   useCdn: process.env.NODE_ENV === 'production',
   // useCdn == true gives fast, cheap responses using a globally distributed cache.
   // Set this to false if your application require the freshest possible
@@ -18,7 +18,7 @@ export const imageBuilder = source => sanityImage(client).image(source)
 export const previewClient = sanityClient({
   ...options,
   useCdn: false,
-  token: process.env.SANITY_API_TOKEN,
+  sanityToken: process.env.SANITY_API_TOKEN,
 })
 
 export default client
