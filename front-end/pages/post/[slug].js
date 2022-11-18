@@ -19,13 +19,15 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
 
     const router = useRouter();
     const [imageUrl, setImageUrl] = useState('');
+    const [AuthorUrl, setAuthorUrl] = useState('');
 
     useEffect(() => {
         const imgUrlBuilder = imageUrlBuilder({
-            projectId: 'om0uizd8',
+            projectId: 'ogthfjsu',
             dataset:'production',
         });
         setImageUrl(imgUrlBuilder.image(image));
+        setAuthorUrl(imgUrlBuilder.image(authorImage));
 
     },  []);
 
@@ -48,7 +50,7 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
              <div className={styles.avatarContainer}>
              {authorImage && (
                             <div className={styles.avatarRoundImage}>
-                            <img className={styles.avatarRoundImage} src={urlFor(authorImage).width(50).url()}/>
+                            <img className={styles.avatarRoundImage} src={AuthorUrl}/>
                             </div>
                              )}
                   <div className={styles.avatarFont}>{authorName}</div>

@@ -1,7 +1,7 @@
 @import "../theme/theme";
 
 .nav {
-  font-family: "Montserrat", sans-serif;
+  font-family:$title-font;
   background: $nav-background;
   //border-bottom: 1px solid #ebebeb;
   box-shadow: 2px 4px 5px lightgrey;
@@ -43,7 +43,7 @@
 // Show menu when #menu-toggle checkbox is checked, use ~
 .menu_toggle:checked ~ .menu {
   display: flex;
-  background-color: $brand-primary-dark;
+  background-color: $brand-primary;
   padding-top: 4em;
   padding-bottom: 4em;
 }
@@ -72,7 +72,7 @@
     height: 4em;
     position: static;
     //background-color: #212121;
-    background-color:#fff;
+    background-color:$primary-light;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
@@ -88,11 +88,13 @@
         color: #fff;
         font-size: 1em;
         cursor: pointer;
-        font-family: Arial Bold;
+        font-family:$title-font;
         //border-right: 0.5px solid #7e5e60;
         a {
           //color: $link-color-alt;
-          color:#212121
+          color:$brand-primary-dark;
+          text-shadow: -1px 1px 0 $brand-primary,
+                         
         }
       }
       li:last-child {

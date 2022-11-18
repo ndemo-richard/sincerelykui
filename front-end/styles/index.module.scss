@@ -9,6 +9,8 @@
 .wrapper{
   position: relative;
   width:100%;
+  font:$core-font;
+  background-color:$primary-light;
   //height: 100vh;
 }
 .module_header{
@@ -36,9 +38,8 @@
   gap:1rem;
   align-items: flex-start;
   justify-content: center;
-
   width: 100%;
-  height:600px;
+  height:44rem;
   //padding: 3rem 3rem 0rem;
   padding: 3rem;
   
@@ -50,8 +51,8 @@
   padding: 2rem;
 }
 .intro_more {
-  background-color: black;
-  color: white;
+  background-color: $brand-primary;
+  color: $primary;
   display: block;
   height: 40px;
   line-height: 40px;
@@ -73,7 +74,7 @@
   //margin: 25px;
   width: 50%;
   height: 100%;
-  background-color: rgb(250, 250, 250);
+  //background-color: rgb(250, 250, 250);
   cursor: pointer;
   text-align: center;
   max-width: calc(100vw - 50px);
@@ -81,7 +82,7 @@
  // border-radius: 25px;
  h4{
   font-size: 0.7rem;
-  font-family: 'Yusei Magic', sans-serif;
+  font-family: $core-font;
   color: #ee6677;
 }
 
@@ -91,9 +92,9 @@
 
 .post_title{
   font-weight: 900;
-  font-family: 'Playfair Display', serif;
+  font-family: $core-font;
   text-transform: capitalize;
-  color:#50505a;
+  color:$secondary-dark;
   font-size: 1.4rem;
   line-height: 1;
   height: 3rem;
@@ -103,7 +104,7 @@
 
 }
 .blocks{
-  font-family: 'Yusei Magic', sans-serif;
+  font-family: $core-font;
   color:#444444;
   width:100%;
   font-size: 1em;
@@ -111,6 +112,7 @@
   overflow: hidden;
   display: block;
   height: 6rem;
+  margin-bottom: 1rem;
 
 }
 .avatar_date{
@@ -118,11 +120,21 @@
   flex-direction: row;
   padding-left: 0.5rem;
 }
+.mainImage_intro{
+  width: 90%;
+  height: 14rem;
+  transition: 0.2s;
+  outline: 10px solid $brand-primary;
+  margin-bottom: 1rem;
+  //border-radius: 25px;
+  }
 .mainImage {
-width: 100%;
-height: 14rem;
+width: 90%;
+height: 24rem;
 transition: 0.2s;
-border-radius: 25px;
+outline: 10px solid $brand-primary;
+margin-bottom: 1rem;
+//border-radius: 25px;
 }
 .box {
 
@@ -166,12 +178,12 @@ p {
 }
 
 label {
-  border-radius: 4px;
+  //border-radius: 4px;
   padding: 0.2em 0.6em;
 //  border: 1px solid #009ce2;
-  //background-color: #00acff;
-  color: #ee6677;
-  font-size: 0.8em;
+  background-color: $brand-primary;
+  color: $primary;
+  font-size: 1em;
 }
 }
 .noPost{
@@ -231,18 +243,20 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
 .mentalHealth{
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
-  height:600px;
+  height:44rem;
   width: 100%;
   padding: 0 2rem 0;
+  padding-top: 2rem;
 }
 .mental_post{
   max-width: calc(100vw - 50px);
   height:30rem;
   width:30%;
-  background-color: antiquewhite;
+  cursor: pointer;
+  //background-color: antiquewhite;
 
 
 }
@@ -298,19 +312,22 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
 .lifestyle{
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
-  height:600px;
+  padding-top: 2rem;
+  height:44rem;
   width: 100%;
   padding: 0 2rem 0;
+  padding-top: 2rem;
 
 }
 .lifestyle_post{
   max-width: calc(100vw - 50px);
   height:30rem;
   width:30%;
-  background-color: antiquewhite;
+  cursor: pointer;
+  //background-color: antiquewhite;
 
 }
 
@@ -344,10 +361,11 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
 .foodRecipe{
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
-  height:600px;
+  padding-top: 2rem;
+  height:44rem;
   width: 100%;
  
 }
@@ -355,7 +373,8 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   max-width: calc(100vw - 50px);
   height:30rem;
   width:30%;
-  background-color: antiquewhite;
+  cursor: pointer;
+  //background-color: antiquewhite;
 
 }
 
@@ -423,8 +442,9 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   }
   .mainImage {
     width: 100%;
+    height: 14rem;
     transition: 0.2s;
-    border-radius: 5px;
+    //border-radius: 5px;
     max-width: calc(100vw - 50px);
     box-shadow: none;
   }
