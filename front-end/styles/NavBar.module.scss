@@ -2,9 +2,9 @@
 
 .nav {
   font-family:$title-font;
-  background: $nav-background;
+  background: $brand-primary;
   //border-bottom: 1px solid #ebebeb;
-  box-shadow: 2px 4px 5px lightgrey;
+  //box-shadow: 2px 4px 5px lightgrey;
   padding: 1em;
 
   ul {
@@ -53,7 +53,7 @@
   float: right;
   span {
     display: block;
-    background: $brand-primary;
+    background: $highlight;
     width: 24px;
     height: 3px;
     margin: 4px;
