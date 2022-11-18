@@ -22,6 +22,7 @@
         text-decoration: none;
         color: $link-color-alt;
 
+
         &:hover {
           color: $link-hover;
         }
@@ -71,7 +72,6 @@
     width: 100%;
     height: 4em;
     position: static;
-    //background-color: #212121;
     background-color:$primary-light;
     padding: 0 20px;
     display: flex;
@@ -93,7 +93,7 @@
         a {
           //color: $link-color-alt;
           color:$brand-primary-dark;
-          text-shadow: -1px 1px 0 $brand-primary,
+          text-shadow: -1px 1px 0 $brand-primary;
                          
         }
       }
