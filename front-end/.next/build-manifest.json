@@ -30,10 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/allPost": [
+    "/foodRecipe": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/allPost.js"
+      "static/chunks/pages/foodRecipe.js"
+    ],
+    "/mentalHealth": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/mentalHealth.js"
     ]
   },
   "ampFirstPages": []
