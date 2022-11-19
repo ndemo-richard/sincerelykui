@@ -29,7 +29,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
         <div className={styles.one}>
           <h1>Life is too short to be left to the people or things that make you unhappy</h1>
           <p>welcome to sincerely blog where we talk about mental health, lifestyle and not forgetting giving you tips on your favourite food recipe</p>
-          <div className={styles.intro_more}>all recent posts &nbsp; ➔</div>
+          <Link className={styles.intro_more} href="/allPost">all recent posts &nbsp; ➔</Link>
         </div>
         <div className={styles.intro_wrapper}>
         {newPost.length ? newPost.map((p,index) => (
