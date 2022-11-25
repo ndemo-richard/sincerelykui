@@ -36,7 +36,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
             <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.post}>
               <img className={styles.mainImage_intro} src={urlFor(p.mainImage)} alt="no image" />
               <div className={styles.avatar_date}>
-              <Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>
+             {/* <Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>*/}
               <Date dateString={p.publishedAt}/>
               </div>
 

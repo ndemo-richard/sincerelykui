@@ -5,7 +5,7 @@ export default function Date({dateString }){
         return 'No date'
     }
     const date = parseISO(dateString)
-    return <div className="container"><time dateTime={dateString}>{format(date, 'LLLL    d, yyyy')}</time>
+    return <div className="container"><time dateTime={dateString}>{format(date, 'LLL    d, yyyy')}</time>
     <style jsx>{`
     .container{
         color:grey;

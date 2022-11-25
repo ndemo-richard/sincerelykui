@@ -10,7 +10,7 @@
   position: relative;
   width:100%;
   font:$core-font;
-  background-color:$primary-light;
+  background-color:$brand-secondary-light;
   //height: 100vh;
 }
 .module_header{
@@ -20,6 +20,7 @@
   height:5rem;
   padding-top: 1rem;
   z-index: 9;
+  background-color: $brand-secondary-light;
 }
 .logo{
   position: relative;
@@ -28,7 +29,7 @@
 
   img{
    //background-color: green;
-   width:30rem;
+   width:16rem;
    height:5rem;  
   }
 
@@ -50,9 +51,18 @@
   height: 24rem;
   padding: 2rem;
 }
-.intro_more {
-  background-color: $brand-secondary;
+.one h1{
+  font-family: $fun-font;
   color: $primary;
+}
+.one p{
+  color:$secondary;
+  font-family: $core-font;
+}
+.intro_more {
+  background-color: $brand-primary;
+  font-family: $title-font;
+  color: $primary !important;
   display: block;
   height: 40px;
   padding-top:5px;
@@ -94,40 +104,46 @@
 
 .post_title{
   font-weight: 900;
-  font-family: $core-font;
+  font-family: $fun-font;
   text-transform: capitalize;
-  color:$secondary-dark;
-  font-size: 1.4rem;
-  line-height: 1;
-  height: 3rem;
+  //color:;
+  font-size: 1.3rem;
+  line-height:1.4rem;
+  //height: 3rem;
   width: fit-content;
   margin: auto;
-  margin-bottom: 1rem;
 
 }
 .blocks{
   font-family: $core-font;
-  color:#444444;
+  color:#180d0d;
   width:100%;
   font-size: 1em;
   line-height: 1;
   overflow: hidden;
   display: block;
   height: 6rem;
-  margin-bottom: 1rem;
+  text-align:left;
+  margin-bottom: 2rem;
+  font-weight: 100;
+  color:$secondary
 
 }
 .avatar_date{
   display: flex;
   flex-direction: row;
-  padding-left: 0.5rem;
-}
-.mainImage_intro{
-  width: 90%;
-  height: 14rem;
-  transition: 0.2s;
-  outline: 10px solid $brand-primary;
+  width: fit-content;
+  //padding-left: 0.5rem;
+  margin:auto;
   margin-bottom: 1rem;
+}
+
+.mainImage_intro{
+  width: 50%;
+  height: 8rem;
+  transition: 0.2s;
+  outline: 6px solid $primary;
+ // margin-bottom: 1rem;
   border: 0.5px solid $brand-secondary;
   //border-radius: 25px;
   }
@@ -137,7 +153,7 @@ height: 24rem;
 transition: 0.2s;
 outline: 10px solid $brand-primary;
 border: 0.5px solid $brand-secondary;
-margin-bottom: 1rem;
+//margin-bottom: 1rem;
 //border-radius: 25px;
 }
 .box {
@@ -426,6 +442,7 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
     height: 24rem;
     padding: 8%;
   }
+  
   .intro_more {
     text-transform: uppercase;
   }
