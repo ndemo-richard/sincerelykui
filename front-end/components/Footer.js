@@ -7,7 +7,7 @@ import styles from "../styles/Footer.module.scss";
 const Footer = props => (
   <div className={styles.Footer}>
     <div className={styles.wrapper}>
-      <div className={styles.advert} ><h3>join 20,000+ people who get our news alerts</h3>
+      <div className={styles.advert} ><h3>you shouldn't start your week with only work emails, but also with good dose of memorable posts</h3>
         <form className="styles.form">
           <input className={styles.input} type="email" placeholder="example@email.com" />
           <input className={styles.input} type="submit" value="Subscribe"/>
