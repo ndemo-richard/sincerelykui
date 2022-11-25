@@ -57,7 +57,10 @@
 }
 .one p{
   color:$secondary;
-  font-family: $core-font;
+  //font-family: $core-font;
+  font-family: $tan-font;
+  font-size: 2rem;
+  font-weight: 300;
 }
 .intro_more {
   background-color: $brand-primary;
