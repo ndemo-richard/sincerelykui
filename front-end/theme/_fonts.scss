@@ -5,9 +5,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500");
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-
 */
-@import url("https://fonts.googleapis.com/css?family=Tangerine|Happy Monkey|Poppins|Rakkas|Raleway|Forum|Mrs+Saint+Delafield");
+
+@import '~@fontsource/mrs-saint-delafield';
+
+@import url("https://fonts.googleapis.com/css?family=Tangerine|Happy Monkey|Poppins|Rakkas|Raleway|Forum");
 
 $logo-font: "Share Tech Mono", monospace;
 $header-font: "Raleway", sans-serif;
@@ -16,5 +18,5 @@ $title-font: "Rakkas", sans-serif;
 $base-font:"Forum",sans-serif;
 $fun-font:"Happy Monkey", sans-serif;
 $tan-font:"Tangerine" ,sans-serif;
-$sig-font:"Mrs Saint Delafield", sans-serif;
-$article-title-font:"Raleway",cursive,sans-serif;
+$sig-font:"Mrs Saint Delafield", cursive;
+$article-title-font:"Raleway",cursive;
