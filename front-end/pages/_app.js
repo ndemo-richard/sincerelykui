@@ -1,6 +1,7 @@
 import '../styles/global.css'
 import React from "react";
 import Router from "next/router";
+import '../theme/_fonts.scss'
 
 
 export default function App({ Component, pageProps }) {
