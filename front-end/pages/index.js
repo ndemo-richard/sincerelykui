@@ -33,21 +33,9 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
         </div>
         <div className={styles.intro_wrapper}>
         <div className={styles.mainImage_intro}><img  src='/intro-image.jpg' alt="no image"  />
-        <h3 className={styles.overlay_text}>
-            photoshop
-        </h3>
+        <h3 className={styles.overlay_text}>photoshop</h3>
+        </div>  
         </div>
-        
-        </div>
-
-      </section>
-      <section className={styles.advert1_wrapper}>
-      <h1 className={styles.h1_advert1}>Youtube videos</h1>
-        <div className={styles.advert1}>
-      <div className={styles.circle1}></div>
-      <div className={styles.circle2}></div>
-      <div className={styles.circle3}></div>
-      </div>
       </section>
       <section className={styles.mentalHealth}>
       <h1>Make mental health your priority</h1>
@@ -78,9 +66,27 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       <section className={styles.advert2_wrapper}>
         <h1 className={styles.h1_advert2}>Podcast clips</h1>
         <div className={styles.advert2}>
-      <div className={styles.circle1_1}></div>
-      <div className={styles.circle2_1}></div>
-      <div className={styles.circle3_1}></div>
+      <div className={styles.circle1_1}>
+      <img src="/podcast.jpg" alt='pic'/>
+      <div className={styles.overlay_circle}>
+        <h2>photoshop</h2>
+        <p>check it out</p>
+      </div>
+      </div>
+      <div className={styles.circle2_1}>
+      <img src="/podcast.jpg" alt='pic'/>
+      <div className={styles.overlay_circle}>
+        <h2>photoshop</h2>
+        <p>check it out</p>
+      </div>
+      </div>
+      <div className={styles.circle3_1}>
+      <img src="/podcast.jpg" alt='pic'/>
+      <div className={styles.overlay_circle}>
+        <h2>photoshop</h2>
+        <p>check it out</p>
+      </div>
+      </div>
       </div>
       </section>
       <section className={styles.lifestyle}>
