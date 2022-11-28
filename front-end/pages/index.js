@@ -32,23 +32,12 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
           <Link className={styles.intro_more} href="/allPost">all recent posts &nbsp; ➔</Link>
         </div>
         <div className={styles.intro_wrapper}>
-        {newPost.length ? newPost.map((p,index) => (
-            <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.post}>
-             <div className={styles.mainImage_intro}><img  src={urlFor(p.mainImage)} alt="no image" /></div>
-              <div className={styles.avatar_date}>
-             {/* <Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>*/}
-              <Date dateString={p.publishedAt}/>
-              </div>
-
-              <h3 className={styles.post_title}>{p.title}</h3>
-              <div className={styles.box}>
-                <input type="checkbox" className={styles.expanded} />
-              <div className={styles.blocks}><BlockContent blocks={p.body} /></div>
-              <label htmlFor="expanded"
-              role="button">View more ...</label>
-              </div>
-            </div>
-          )) : <div className={styles.noPost}></div>}
+        <div className={styles.mainImage_intro}><img  src='/intro-image.jpg' alt="no image"  />
+        <h3 className={styles.overlay_text}>
+            photoshop
+        </h3>
+        </div>
+        
         </div>
 
       </section>
