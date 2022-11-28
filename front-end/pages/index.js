@@ -34,7 +34,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
         <div className={styles.intro_wrapper}>
         {newPost.length ? newPost.map((p,index) => (
             <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.post}>
-              <img className={styles.mainImage_intro} src={urlFor(p.mainImage)} alt="no image" />
+             <div className={styles.mainImage_intro}><img  src={urlFor(p.mainImage)} alt="no image" /></div>
               <div className={styles.avatar_date}>
              {/* <Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>*/}
               <Date dateString={p.publishedAt}/>
@@ -61,11 +61,13 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       </div>
       </section>
       <section className={styles.mentalHealth}>
+      <h1>Make mental health your priority</h1>
+      <div className={styles.post_col_4}>
       {mentalHealth.length ? mentalHealth.map((p, index) => (
-            <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.mental_post}>
-              <img className={styles.mainImage} src={urlFor(p.mainImage)} alt="no image" />
+            <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.section_post}>
+              <div className={styles.mainImage} ><img src={urlFor(p.mainImage)} alt="no image" /></div>
               <div className={styles.avatar_date}>
-              <Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>
+              {/*<Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>*/}
               <Date dateString={p.publishedAt}/>
               </div>
               <h3 className={styles.post_title}>{p.title}</h3>
@@ -80,6 +82,9 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
         <div>
             
         </div>
+
+      </div>
+      
       </section>
       <section className={styles.advert2_wrapper}>
         <h1 className={styles.h1_advert2}>Podcast clips</h1>
@@ -90,14 +95,15 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       </div>
       </section>
       <section className={styles.lifestyle}>
-      {lifestyle.length ? lifestyle.map((p,index) => (
-            <div onClick={() => Router.push(`/post/${slug}`)} key={index} className={styles.lifestyle_post}>
-              <img className={styles.mainImage} src={urlFor(p.mainImage)} alt="no image" />
+      <h1>The purpose of our lives is to be happy</h1>
+      <div className={styles.post_col_4}>
+      {lifestyle.length ? lifestyle.map((p, index) => (
+            <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.section_post}>
+              <div className={styles.mainImage} ><img src={urlFor(p.mainImage)} alt="no image" /></div>
               <div className={styles.avatar_date}>
-              <Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>
+              {/*<Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>*/}
               <Date dateString={p.publishedAt}/>
               </div>
-
               <h3 className={styles.post_title}>{p.title}</h3>
               <div className={styles.box}>
                 <input type="checkbox" className={styles.expanded} />
@@ -106,18 +112,26 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
               role="button">read more ...</label>
               </div>
             </div>
-          )): <div className={styles.noPost}></div>}
+          )) : <div className={styles.noPost}></div>}
+        <div>
+            
+        </div>
+
+      </div>
+      
       </section>
       <section className={styles.advert3}>
         <h1 className={styles.h1_advert3}>Latest youtube video</h1>
         <div className={styles.rect1}></div>
       </section>
       <section className={styles.foodRecipe}>
-      {foodRecipe.length ? foodRecipe.map((p,index) => (
-            <div onClick={() => Router.push(`/post/${slug}`)} key={index} className={styles.food_post}>
-              <img className={styles.mainImage} src={urlFor(p.mainImage)} alt="no image" />
+      <h1>A little slice of heaven</h1>
+      <div className={styles.post_col_4}>
+      {foodRecipe.length ? foodRecipe.map((p, index) => (
+            <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.section_post}>
+              <div className={styles.mainImage} ><img src={urlFor(p.mainImage)} alt="no image" /></div>
               <div className={styles.avatar_date}>
-              <Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>
+              {/*<Avatar name={p.authorName} picture={urlFor(p.authorImage)}/>*/}
               <Date dateString={p.publishedAt}/>
               </div>
               <h3 className={styles.post_title}>{p.title}</h3>
@@ -128,9 +142,13 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
               role="button">read more ...</label>
               </div>
             </div>
+          )) : <div className={styles.noPost}></div>}
+        <div>
             
-          )): <div className={styles.noPost}></div> }
-          
+        </div>
+
+      </div>
+      
       </section>
     
     </div>
@@ -161,10 +179,10 @@ const client = createClient({
   
 
 export async function getStaticProps() {
-    const newPost = await client.fetch(`*[_type == "post"][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
-    const mentalHealth = await client.fetch(`*["mental_health" in categories[]->title][0...3]{_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
-    const lifestyle = await client.fetch(`*["lifestyle" in categories[]->title][0...3]{_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
-    const foodRecipe = await client.fetch(`*["food_recipe" in categories[]->title][0...3]{_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
+    const newPost = await client.fetch(`*[_type == "post"][0...2]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
+    const mentalHealth = await client.fetch(`*["mental_health" in categories[]->title][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
+    const lifestyle = await client.fetch(`*["lifestyle" in categories[]->title][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
+    const foodRecipe = await client.fetch(`*["food_recipe" in categories[]->title][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
   
     return {
         
