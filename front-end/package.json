@@ -13,7 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fontsource/forum": "^4.5.9",
+    "@fontsource/happy-monkey": "^4.5.11",
     "@fontsource/mrs-saint-delafield": "^4.5.10",
+    "@fontsource/rakkas": "^4.5.11",
+    "@fontsource/raleway": "^4.5.11",
+    "@fontsource/tangerine": "^4.5.9",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",

@@ -8,15 +8,18 @@
 */
 
 @import '~@fontsource/mrs-saint-delafield';
-
-@import url("https://fonts.googleapis.com/css?family=Tangerine|Happy Monkey|Poppins|Rakkas|Raleway|Forum");
+@import "~@fontsource/tangerine";
+@import "~@fontsource/happy-monkey";
+@import "~@fontsource/rakkas";
+@import "~@fontsource/raleway";
+@import "~@fontsource/forum";
 
 $logo-font: "Share Tech Mono", monospace;
 $header-font: "Raleway", sans-serif;
-$core-font: "Forum", sans-serif;
-$title-font: "Rakkas", sans-serif;
+$core-font: "Forum", cursive;
+$title-font: "Rakkas", cursive;
 $base-font:"Forum",sans-serif;
-$fun-font:"Happy Monkey", sans-serif;
-$tan-font:"Tangerine" ,sans-serif;
+$fun-font:"Happy Monkey", cursive;
+$tan-font:"Tangerine" ,cursive;
 $sig-font:"Mrs Saint Delafield", cursive;
 $article-title-font:"Raleway",cursive;
