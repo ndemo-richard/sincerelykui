@@ -42,14 +42,14 @@ export default function Lifestyle({ posts}) {
 
     <Layout>
       <Head>
-    <title>villagerant</title>
+    <title>sincerely kui</title>
       <meta name="description" content="Stories of someone with too much time to spend" />
       <meta name="robots" content="index, follow"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <link rel="canonical" href="https://www.villagerant.xyz" />
+      <link rel="canonical" href="https://www.sincerelykui.com" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@villagerant" />
-      <meta name="twitter:title" content="villagerant" />
+      <meta name="twitter:site" content="@sincerelykui" />
+      <meta name="twitter:title" content="sincerelykui" />
       <meta name="twitter:description" content="stories of someone with too much time to spend" />
       <meta name="twitter:image" content="https://unsplash.com/photos/0drW3CxGkfw" />
                 </Head>
