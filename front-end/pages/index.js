@@ -32,7 +32,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
           <Link className={styles.intro_more} href="/allPost">all recent posts &nbsp; ➔</Link>
         </div>
         <div className={styles.intro_wrapper}>
-        <div className={styles.mainImage_intro}><img  src='/kui.jpeg' alt="kui photo"  />
+        <div className={styles.mainImage_intro}><img  src='/kui-lie.jpeg' alt="kui photo"  />
         <h3 className={styles.overlay_text}>photoshop</h3>
         </div>  
         </div>

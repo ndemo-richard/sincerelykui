@@ -85,10 +85,10 @@
   color: $primary !important;
   display: block;
   height: 40px;
+  width: 12rem;
   padding-top:5px;
  // line-height: 40px;
   text-decoration: none;
-  width: 12rem;
   text-transform: uppercase;
   text-align: center;
   border:4px solid $primary
@@ -96,14 +96,14 @@
 .intro_wrapper{
   display: flex;
   gap:3rem;
-  align-items: flex-start;
+  align-items:center;
   justify-content: center;
   width: 50%;
   height:30rem;
 }
 .mainImage_intro{
   position: relative;
-  width: 36%;
+  width: 60%;
   height: fit-content;
   outline: 10px solid $primary;
   background-color: gray;
@@ -115,8 +115,8 @@
   .mainImage_intro img {
     width: 100%;
     height: auto;
-    aspect-ratio: 2400 / 3600;
-    transform: rotate(45deg);
+    aspect-ratio: 1600 / 1094;
+    transform: rotate(38deg);
     outline: 10px solid $primary;
     
   }
@@ -239,15 +239,6 @@ input {
   
 }
 
-/*p {
-  display: -webkit-box;
-  -webkit-line-clamp: none;
-  -webkit-box-orient: vertical;
-  margin: 0;
-  overflow: hidden;
-  background-color: red;
-
-}*/
 
 input:focus ~ label {
   outline: -webkit-focus-ring-color auto 5px;
@@ -538,23 +529,20 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
     //height: 100vh;
   }
   .module_header{
-    padding-top: 3rem;
+    padding-top: 1rem;
   }
 
   .logo{  
     img{
      width:14rem;
-     height:2.5rem;  
+     height:6rem;  
     }
   
   }
-
-
   .module_promo{
     position: relative;
     flex-direction: column;
     margin: auto;
-    margin-top:2rem;
     width: 90%;
     height:fit-content;
     //padding: 3rem 3rem 0rem;
@@ -563,19 +551,37 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   }
   .one{
     width:100%;
-    height: 24rem;
+    height: 20rem;
     padding: 8%;
+  }
+  .one h1{
+    font-size: 20px;
+  }
+  .one p{
+    font-size:1.5rem;
+
   }
   
   .intro_more {
+    width:10rem;
+    height:30px;
+    font-size: 0.8rem;
     text-transform: uppercase;
+   
   }
   .intro_wrapper{
     flex-direction: column;
     width: 100%;
-    height:max-content;
+    height:fit-content;
+    margin: auto;   
+  }
+  .mainImage_intro{
     margin: auto;
-   
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .overlay_text{
+    margin-left: -4.5rem;
   }
   .post {
     width:100%;
@@ -587,6 +593,7 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
     box-shadow: none;
     border-radius: 0;
   }
+
   .mainImage {
     width: 100%;
     height: 14rem;
@@ -596,29 +603,6 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
     box-shadow: none;
   }
   
-  .advert1_wrapper{
-    height:max-content;
-  
-  }
-
-  .advert1{
-   flex-wrap: wrap;
-    gap: 0.5em;
-  
-  }
-  .circle1{
-    height: 8em;
-    width: 8em;
-  }
-  .circle2{
-    height: 8rem;
-    width: 8rem;
-  }
-  .circle3{
-    height: 8rem;
-    width: 8rem;
-  
-  }
   /*--------------------------------------------------------------------------------------------------
   --------------------------------------------------------------------------------------------------
 -
@@ -626,22 +610,34 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
 
 -------------------------------------------------------------------------------------------*/
 .mentalHealth{
-  flex-direction: column;
-  height:max-content;
   width: 90%;
   margin: auto;
   padding: 1rem 0 1rem;
+  height: fit-content;
+  
+  h1{
+    font-size:22px;
+    margin-left:2rem;
+    margin-bottom:3rem;
+  }
+
 }
-.mental_post{
-  width:100%;
-    height:30rem;
-    margin: auto;
-    cursor: pointer;
-    text-align: center;
-    max-width: calc(100vw - 50px);
-    box-shadow: none;
-    border-radius: 0;
+.post_col_4{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left:0;
+  height: fit-content;
+  padding-bottom: 2rem;
+  height: fit-content;
 }
+.section_post{
+  max-width: calc(100vw - 50px);
+  width: 90%;
+  margin-bottom: 4rem;
+
+}
+
 
 
 
@@ -680,18 +676,16 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   height:max-content;
   width: 90%;
   padding: 0;
-  margin: 1rem auto 1rem
+  margin: 1rem auto 1rem;
+
+  h1{
+    font-size:22px;
+    margin-left:2rem;
+    margin-bottom:3rem;
+    margin-top: 4rem;
+  }
 }
-.lifestyle_post{
-  width:100%;
-  height:30rem;
-  margin: auto;
-  cursor: pointer;
-  text-align: center;
-  max-width: calc(100vw - 50px);
-  box-shadow: none;
-  border-radius: 0;
-}
+
 .advert3{
   height:max-content;
   padding-bottom: 2rem;
@@ -714,17 +708,15 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   height:max-content;
   width: 90%;
   margin: 1rem auto 1rem;
+
+  h1{
+    font-size:22px;
+    margin-left:2rem;
+    margin-bottom:3rem;
+    margin-top: 4rem;
+  }
 }
-.food_post{
-  width:100%;
-    height:30rem;
-    margin: auto;
-    cursor: pointer;
-    text-align: center;
-    max-width: calc(100vw - 50px);
-    box-shadow: none;
-    border-radius: 0;
-}
+
 /*---------------------------end foodrecipe section----------------------------------------
 ------------------------------------------------------------------------------------------*/
   
