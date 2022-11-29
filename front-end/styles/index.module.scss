@@ -72,7 +72,7 @@
   font-style: normal;
 }
 .one p{
-  color:$secondary;
+  color:$on-primary-light;
   //font-family: $core-font;
   font-family: $tan-font;
   font-size: 2rem;
@@ -80,7 +80,7 @@
  
 }
 .intro_more {
-  background-color: $brand-primary;
+  background-color: $secondary-on;
   font-family: $title-font;
   color: $primary !important;
   display: block;
@@ -106,7 +106,7 @@
   width: 60%;
   height: fit-content;
   outline: 10px solid $primary;
-  background-color: gray;
+  background-color: $secondary-dark-on;
  // margin-bottom: 1rem;
 //  border: 2px solid $brand-secondary;
   //border-radius: 25px;
@@ -582,6 +582,7 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   }
   .overlay_text{
     margin-left: -4.5rem;
+    margin-bottom: -2rem;
   }
   .post {
     width:100%;

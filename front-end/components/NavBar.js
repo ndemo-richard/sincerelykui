@@ -4,7 +4,7 @@ const Navbar = () => (
 
 
 <div className={styles.nav}>
-    <input className={styles.menu_toggle} type="checkbox" id="menu-toggle"/>
+    <input className={styles.menu_toggle} type="checkbox" id="menu-toggle" placeholder='lorem ipsum'/>
   <label className={styles.mobile_menu_label} htmlFor="menu-toggle">
       <div className={styles.menu_icon}>
 			<span></span>

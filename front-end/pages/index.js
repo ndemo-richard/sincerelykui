@@ -33,7 +33,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
         </div>
         <div className={styles.intro_wrapper}>
         <div className={styles.mainImage_intro}><img  src='/kui-lie.jpeg' alt="kui photo"  />
-        <h3 className={styles.overlay_text}>photoshop</h3>
+        <h3 className={styles.overlay_text}>Love hearts</h3>
         </div>  
         </div>
       </section>
@@ -49,7 +49,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
               </div>
               <h3 className={styles.post_title}>{p.title}</h3>
               <div className={styles.box}>
-                <input type="checkbox" className={styles.expanded} />
+                <input type="checkbox" className={styles.expanded } placeholder='lorem ipsum'/>
               <div className={styles.blocks}><BlockContent blocks={p.body} /></div>
               <label htmlFor="expanded"
               role="button">read more ...</label>
@@ -101,7 +101,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
               </div>
               <h3 className={styles.post_title}>{p.title}</h3>
               <div className={styles.box}>
-                <input type="checkbox" className={styles.expanded} />
+                <input type="checkbox" className={styles.expanded} placeholder='lorem ipsum'/>
               <div className={styles.blocks}><BlockContent blocks={p.body} /></div>
               <label htmlFor="expanded"
               role="button">read more ...</label>
@@ -131,7 +131,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
               </div>
               <h3 className={styles.post_title}>{p.title}</h3>
               <div className={styles.box}>
-                <input type="checkbox" className={styles.expanded} />
+                <input type="checkbox" className={styles.expanded} placeholder='lorem ipsum'/>
               <div className={styles.blocks}><BlockContent blocks={p.body} /></div>
               <label htmlFor="expanded"
               role="button">read more ...</label>
