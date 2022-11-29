@@ -2,7 +2,7 @@
 
 .nav {
   font-family:$title-font;
-  background: $brand-primary;
+  background: $brand-secondary;
   //border-bottom: 1px solid #ebebeb;
   //box-shadow: 2px 4px 5px lightgrey;
   padding: 1em;
@@ -54,7 +54,7 @@
   float: right;
   span {
     display: block;
-    background: $highlight;
+    background: $secondary-dark;
     width: 24px;
     height: 3px;
     margin: 4px;
