@@ -33,7 +33,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
         </div>
         <div className={styles.intro_wrapper}>
         <div className={styles.mainImage_intro}><img  src='/kui-lie.jpeg' alt="kui photo"  />
-        <h3 className={styles.overlay_text}>Love hearts</h3>
+       {/* <h3 className={styles.overlay_text}>Love hearts</h3>*/} 
         </div>  
         </div>
       </section>
