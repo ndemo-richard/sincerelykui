@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from "next/link";
 import Router from 'next/router';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import imageUrlBuilder from '@sanity/image-url';
 import styles from '../styles/index.module.scss';
 import Avatar from '../components/avatar';

@@ -3,44 +3,16 @@ import styles from '../styles/allpost.module.scss'
 import  Layout  from '../components/Layout';
 import Date from '../components/date';
 import Avatar from '../components/avatar';
+import Router from 'next/router';
+import Link from 'next/link';
 import imageUrlBuilder from '@sanity/image-url';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import BlockContent from '@sanity/block-content-to-react';
-
-export default function allPost({ posts}) {
-
-
-  const router = useRouter();
-  const [mappedPosts, setMappedPosts] = useState([]);
-
-  useEffect(() => {
-    if (posts.length) {
-      const imgBuilder = imageUrlBuilder({
-        projectId: 'ogthfjsu',
-        dataset: 'production',
-      });
-
-      setMappedPosts(
-        posts.map(p => {
-          return {
-            ...p,
-            mainImage: imgBuilder.image(p.mainImage).width(500).height(250),
-            authorImage:imgBuilder.image(p.authorImage),
+import { createClient } from "next-sanity";
 
 
-          }
-        })
-      );
-    } else {
-      setMappedPosts([]);
-    }
-  }, [posts]);
+const allPost =({post, intro_post}) =>(
 
-  return (
-
-
-    <Layout>
+<Layout>
       <Head>
     <title>sincerely kui</title>
       <meta name="description" content="Stories of someone with too much time to spend" />
@@ -61,16 +33,23 @@ export default function allPost({ posts}) {
       </div>
       </div>
       <div className={styles.main}>
-        <h1 className={styles.myblog_title}>Check this out</h1>
-
-        <h3 className={styles.myblog_description}>Life is too short to be left to the people or things that make you unhappy</h3>
+        <h3>CHECK ALL POSTS </h3>
+        <div className={styles.intro_wrapper}>
+        {intro_post.length ? intro_post.map((p, index) => (
+            <div  className={styles.section_post}>
+              <div className={styles.mainImage_intro} ><img src={urlFor(p.mainImage)} alt="no image" /></div>     
+              <div className={styles.intro_post_title}>{p.title}</div>
+              <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.click_more_intro}>Read more</div>
+            </div>
+          )) : <div className={styles.noPost}></div>}
+        </div>
 
         <div className={styles.feed}>
-          {mappedPosts.length ? mappedPosts.map((p, index) => (
+          {post.length ? post.map((p, index) => (
             <div onClick={() => router.push(`/post/${p.slug}`)} key={index} className={styles.post}>
-              <img className={styles.mainImage} src={p.mainImage} alt="no image" />
+              <img className={styles.mainImage} src={urlFor(p.mainImage)} alt="no image" />
               <div className={styles.avatar_date}>
-              <Avatar name={p.authorName} picture={p.authorImage}/>
+              {/*<Avatar name={p.authorName} picture={p.authorImage}/>*/}
               <Date dateString={p.publishedAt}/>
               </div>
 
@@ -88,25 +67,35 @@ export default function allPost({ posts}) {
     </div>
     </Layout>
 
-  );
-}
+);
+export default allPost;
 
-export const getServerSideProps = async pageContext => {
-  const query = encodeURIComponent('*[ _type == "post"]| order( publishedAt desc){_id,"slug": slug.current,title,body,publishedAt,mainImage,"authorImage":author->image,"authorName":author->name}',);
-  const url = `https://ogthfjsu.api.sanity.io/v1/data/query/production?query=${query}`;
-  const result = await fetch(url).then(res => res.json());
+const client = createClient({
+  projectId: "ogthfjsu",
+  dataset: "production",
+  apiVersion: "2021-10-14",
+  useCdn: false
+});
 
-  if (!result.result || !result.result.length) {
-    return {
-      props: {
-        posts: [],
-      }
-    }
-  } else {
-    return {
-      props: {
-        posts: result.result,
-      }
-    }
+
+
+  const builder = imageUrlBuilder(client);
+
+  function urlFor(source) {
+      return builder.image(source);
   }
-};
+
+
+export async function getStaticProps() {
+  const post = await client.fetch ('*[ _type == "post"]| order( publishedAt desc){_id,"slug": slug.current,title,body,publishedAt,mainImage,"authorImage":author->image,"authorName":author->name}',);
+  const intro_post = await client.fetch(`*[_type == "post"][0...1]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
+  
+  return {
+      
+    props: {
+      post,
+      intro_post
+      
+    }
+  };
+}
