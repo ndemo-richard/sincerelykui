@@ -33,13 +33,16 @@ const allPost =({post, intro_post}) =>(
       </div>
       </div>
       <div className={styles.main}>
-        <h3>CHECK ALL POSTS </h3>
+        <h3 className={styles.intro_title_main}>CHECK ALL POSTS </h3>
         <div className={styles.intro_wrapper}>
         {intro_post.length ? intro_post.map((p, index) => (
             <div  className={styles.section_post}>
               <div className={styles.mainImage_intro} ><img src={urlFor(p.mainImage)} alt="no image" /></div>     
-              <div className={styles.intro_post_title}>{p.title}</div>
+             <div className={styles.float_title}>
+             <div className={styles.intro_post_title}>{p.title}</div>
               <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.click_more_intro}>Read more</div>
+             </div>
+              
             </div>
           )) : <div className={styles.noPost}></div>}
         </div>
@@ -47,7 +50,7 @@ const allPost =({post, intro_post}) =>(
         <div className={styles.feed}>
           {post.length ? post.map((p, index) => (
             <div onClick={() => router.push(`/post/${p.slug}`)} key={index} className={styles.post}>
-              <img className={styles.mainImage} src={urlFor(p.mainImage)} alt="no image" />
+              <div className={styles.mainImage} ><img src={urlFor(p.mainImage)} alt="no image" /></div>
               <div className={styles.avatar_date}>
               {/*<Avatar name={p.authorName} picture={p.authorImage}/>*/}
               <Date dateString={p.publishedAt}/>
