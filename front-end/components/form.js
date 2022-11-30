@@ -71,8 +71,8 @@ export default function Form ({_id}) {
         display:flex;
         flex-direction:column;
         
-        background-color:black;
-        box-shadow: 2px 2px 10px #246756;
+        background-color:#FF69B4;
+        box-shadow: 2px 2px 10px #2874d4;
         padding : 5px;
         border-radius:5px;
       }

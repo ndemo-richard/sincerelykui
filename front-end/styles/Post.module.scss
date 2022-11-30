@@ -1,53 +1,59 @@
-@import url('https://fonts.googleapis.com/css2? family=Dancing+Script&family=Yusei+Magic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import "../theme/theme";
+
 .container {
-    width:950px;
+    width:100%;
     height: 100%;
     margin:auto;
-    background-color:inherit;
-    max-width: calc(100vw - 2rem);
-    padding-top:6rem;
+    background-color: ivory;
     padding-bottom:6rem;
 
 
 
+
 .main {
-
-
+    position: relative;
     margin:auto;
-    width:860px;
-    z-index: 9;
-    padding: 2rem 2rem 2rem 2rem;
+    width:100%;
     background-color: ivory;
     align-items: center;
-    max-width: calc(100vw - 50px);
-    box-shadow: 2px 2px 10px #000000;
 }
 .mainImage{
     width: 100%;
 }
+.body_wrapper{
+    position: relative;
+    margin: auto;
+    margin-bottom: 2rem;
+    width:60%;
+    background-color: ivory;
+    margin-top:-5rem;
+    padding-top: 8rem;
+    
+}
 .post_title{
     text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
+    font-family:$base-font;
+    font-weight: 900;
     color: #23232b;
+    width: fit-content;
+    max-width:90%;
     margin: auto;
-    margin-left: 25%;
 
 }
 .body{
-    margin-bottom: 3rem;
-}
-.body p {
+    width: 100%;
     text-indent: 1px;
     line-height: 1.4em;
     text-align: justify;
     letter-spacing: 0.02em;
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: $core-font;
     color:#292828;
     margin: 0;
     font-size: 1.3em;
+    
+    
 }
+
 .avatarContainer{
     display:flex;
     align-items:center;
@@ -80,12 +86,12 @@
 
 //for post
 .commentContainer{
-    margin-top: 16rem;
-    border-top: 1px solid #000000;
+    margin-top: 10rem;
+    border-top: 1px solid $brand-secondary-darker;
     width:100%;
     padding: 1rem 4rem 1rem;
     max-width: calc(100vw - 20px);
-  box-shadow: 2px 2px 10px #246756;
+    box-shadow: 2px 2px 10px $secondary-dark;
 }
 
 
@@ -95,10 +101,8 @@
         width:100%;
         height: 100%;
         margin:auto;
-
-        background-color:inherit;
         max-width: calc(100vw);
-        padding-top:6rem;
+        padding-top:2rem;
         padding-bottom:6rem;
     
 
@@ -119,33 +123,29 @@
     .mainImage{
         width: 100%;
     }
+    .body_wrapper{
+        width:96%;
+        margin-top: 0;
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
     .post_title{
-        text-transform: uppercase;
         font-size: 1.1em;
-        font-family: 'Playfair Display', serif;
-        font-weight: 400;
-        color: #23232b;
-        margin: auto;
-        margin-left: auto;
+        
 
     }
    
 
-    .body p {
-        text-indent: 1px;
-        line-height: 1.4em;
-        text-align: left;
-        letter-spacing: 0.02em;
-        font-family: 'Yusei Magic', sans-serif;
-        color:#292828;
+    .body{
+     
         font-size: 1em;
-        margin-bottom: 0.5em;
         
     }
     }
 
     .commentContainer{
         padding: 3%;
+        margin-top: 4rem;
     }
 
 

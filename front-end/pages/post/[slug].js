@@ -41,9 +41,11 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
         <div className={styles.container}>
 
             <div className={styles.main}>
-                <h1 className={styles.post_title}>{title}</h1>
+                
                 {imageUrl && <img className={ styles.mainImage} src={imageUrl} />}
-                <div className={styles.body}>
+                <div className={styles.body_wrapper}>
+                <h1 className={styles.post_title}>{title}</h1>
+               <div className={styles.body}>
                    <BlockContent blocks={body} />
                 </div>
                 <div className={styles.avatar_date}>
@@ -58,6 +60,9 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
               <Date dateString={publishedAt}/>
               </div>
 
+
+                </div>
+               
               <div className={styles.commentContainer}>
                  <div>
                  <Comments comments={comments} />
