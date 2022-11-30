@@ -49,7 +49,7 @@ const allPost =({post, intro_post}) =>(
 
         <div className={styles.feed}>
           {post.length ? post.map((p, index) => (
-            <div onClick={() => router.push(`/post/${p.slug}`)} key={index} className={styles.post}>
+            <div onClick={() => Router.push(`/post/${p.slug}`)} key={index} className={styles.post}>
               <div className={styles.mainImage} ><img src={urlFor(p.mainImage)} alt="no image" /></div>
               <div className={styles.avatar_date}>
               {/*<Avatar name={p.authorName} picture={p.authorImage}/>*/}
@@ -90,7 +90,7 @@ const client = createClient({
 
 
 export async function getStaticProps() {
-  const post = await client.fetch ('*[ _type == "post"]| order( publishedAt desc){_id,"slug": slug.current,title,body,publishedAt,mainImage,"authorImage":author->image,"authorName":author->name}',);
+  const post = await client.fetch ('*[ _type == "post"][1..-1]| order( publishedAt desc){_id,"slug": slug.current,title,body,publishedAt,mainImage,"authorImage":author->image,"authorName":author->name}',);
   const intro_post = await client.fetch(`*[_type == "post"][0...1]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
   
   return {
