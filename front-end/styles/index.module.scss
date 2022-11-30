@@ -107,7 +107,8 @@
   width: 60%;
   height: fit-content;
   outline: 10px solid $primary;
-  background-color: $secondary-dark-on;
+  //background-color: $secondary-dark-on;
+  background-color: gray;
  // margin-bottom: 1rem;
 //  border: 2px solid $brand-secondary;
   //border-radius: 25px;
@@ -123,16 +124,18 @@
   }
   .overlay_text{
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     left: 10px;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
     margin-left:-6rem;
     font-family:$sig-font;
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 400;
     line-height: 3.1rem;
-    color:$on-primary-light;
+    color:$on-primary;
     transform: rotate(-15deg);
+    //font-family:$tan-font;
+ 
   
   }
 .post {
@@ -585,7 +588,9 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   }
   .overlay_text{
     margin-left: -4.5rem;
-    margin-bottom: -2rem;
+    margin-bottom: -5rem;
+   // width:200px;
+   transform: rotate(-10deg);
   }
   .post {
     width:100%;
