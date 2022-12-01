@@ -11,6 +11,7 @@ import Date from '../components/date';
 import { createClient } from "next-sanity";
 
 
+
 const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
 
     <Layout>
@@ -30,10 +31,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
           <Link className={styles.intro_more} href="/allPost">all recent posts &nbsp; ➔</Link>
         </div>
         <div className={styles.intro_wrapper}>
-        <div className={styles.mainImage_intro}><Image  src='/kui-lie.jpeg' alt="kui photo" width={500}
-      height={500} sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"/>
+        <div className={styles.mainImage_intro}><img  src='/kui-lie.jpeg' alt="kui photo"  />
         <h3 className={styles.overlay_text}>Be fearlessly authentic</h3> 
         </div>  
         </div>
