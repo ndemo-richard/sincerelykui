@@ -62,7 +62,8 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       
       </section>
       <section className={styles.advert2_wrapper}>
-        <h1 className={styles.h1_advert2}>Podcast clips</h1>
+      <div className={styles.parallax_one}></div>
+        {/*<h1 className={styles.h1_advert2}>Podcast clips</h1>
         <div className={styles.advert2}>
       <div className={styles.circle1_1}>
       <img src="/podcast.jpg" alt='pic'/>
@@ -85,7 +86,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
         <p>check it out</p>
       </div>
       </div>
-      </div>
+      </div>*/}
       </section>
       <section className={styles.lifestyle}>
       <h1>The purpose of our lives is to be happy</h1>
@@ -114,8 +115,9 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       
       </section>
       <section className={styles.advert3}>
-        <h1 className={styles.h1_advert3}>Latest youtube video</h1>
-        <div className={styles.rect1}></div>
+      <div className={styles.parallax_two}></div>
+        {/*<h1 className={styles.h1_advert3}>Latest youtube video</h1>
+        <div className={styles.rect1}></div>*/}
       </section>
       <section className={styles.foodRecipe}>
       <h1>A little slice of heaven</h1>
