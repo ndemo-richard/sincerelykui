@@ -1,0 +1,99 @@
+@import '../theme/theme';
+
+.module_header{
+    position: relative;
+    display: block;
+    width: 100%;
+    height:5rem;
+    padding-top: 1rem;
+    z-index: 9;
+    background-color: $brand-secondary;
+  }
+  .logo{
+    position: absolute;
+    margin: auto;
+    width: fit-content;
+    margin-left: 2rem;
+  
+    img{
+     //background-color: green;
+     width:16rem;
+     height:5rem;  
+    }
+  
+  }
+  .module_body{
+    position: relative;
+    display: block;
+    width:100%;
+    height: fit-content;
+    padding-bottom: 4rem;
+    background-color:$brand-secondary;
+  }
+  .body_h1{
+    font-family: $header-font;
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: $primary;
+    width: fit-content;
+    margin: auto;
+    padding-top:2rem ;
+    padding-bottom:2rem ;
+  }
+  .mainImage_intro{
+    position: relative;
+    width: 50%;
+    height: fit-content;
+    //outline: 10px solid $primary;
+    //background-color: $secondary-dark-on;
+    background-color: gray;
+    margin: auto;
+   
+    }
+    .mainImage_intro img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 2 / 2.4;
+      //transform: rotate(38deg);
+      //outline: 10px solid $primary;
+      
+    }
+  .body_content{
+    display: block;
+    width:50%;
+    margin: auto;
+    font-family: $base-font;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.56;
+
+  }
+
+  @media (max-width: 768px) {
+  
+    .wrapper{
+      position: relative;
+      width:100%;
+      //height: 100vh;
+    }
+    .module_header{
+      padding-top: 0rem;
+    }
+  
+    .logo{  
+      img{
+       width:10rem;
+       height:4rem;  
+      }
+    }
+    .mainImage_intro{
+        margin: auto;
+        width:90%;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+      }
+      .body_content{
+        width: 90%;
+      }
+}
