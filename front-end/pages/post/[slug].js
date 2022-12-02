@@ -89,7 +89,7 @@ export const getServerSideProps = async pageContext =>{
             notFound:true
         }
     }
-    const query = encodeURIComponent(`*[ _type == "post" && slug.current == "${pageSlug}"]{_id,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name,'comments': *[_type == "comment" && post._ref == ^._id && approved == true]{
+    const query = encodeURIComponent(`*[ _type == "post" && slug.current == "${pageSlug}"]{_id,title,body[]{...,asset->{...,"_key": _id}},mainImage,publishedAt,"authorImage":author->image,"authorName":author->name,'comments': *[_type == "comment" && post._ref == ^._id && approved == true]{
         _id,
         name,
         email,

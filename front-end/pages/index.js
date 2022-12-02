@@ -10,7 +10,15 @@ import BlockContent from '@sanity/block-content-to-react';
 import Date from '../components/date';
 import { createClient } from "next-sanity";
 
-
+const serializers = {
+  types: {
+    code: (props) => (
+      <pre data-language={props.node.language}>
+        <code>{props.node.code}</code>
+      </pre>
+    ),
+  },
+}
 
 const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
 
@@ -155,6 +163,8 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
 export default Index;
 
 
+
+
 const client = createClient({
     projectId: "ogthfjsu",
     dataset: "production",
@@ -178,8 +188,9 @@ export async function getStaticProps() {
     const newPost = await client.fetch(`*[_type == "post"][0...2]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
     const mentalHealth = await client.fetch(`*["mental_health" in categories[]->title][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
     const lifestyle = await client.fetch(`*["lifestyle" in categories[]->title][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
-    const foodRecipe = await client.fetch(`*["food_recipe" in categories[]->title][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body,mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
+    const foodRecipe = await client.fetch(`*["food_recipe" in categories[]->title][0...3]| order( publishedAt desc){_id,"slug": slug.current,title,body[]{...,asset->{...,"_key": _id}},mainImage,publishedAt,"authorImage":author->image,"authorName":author->name}`);
   
+
     return {
         
       props: {

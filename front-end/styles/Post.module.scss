@@ -49,10 +49,13 @@
     font-family: $core-font;
     color:#292828;
     margin: 0;
-    font-size: 1.3em;
-    
-    
+    font-size: 1.3em;  
 }
+.body img{
+    width:40%;
+    height:auto;
+    aspect-ratio: 3 / 2;
+   }
 
 .avatarContainer{
     display:flex;
