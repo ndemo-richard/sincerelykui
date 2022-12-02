@@ -11,6 +11,7 @@
   width:100%;
   font:$core-font;
   background-color:$brand-secondary;
+  scroll-behavior: smooth;
   //height: 100vh;
 }
 .module_header{
@@ -348,19 +349,22 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   width: 100%;
  // padding-top:1rem;
   background-color: $brand-primary;
+  scroll-behavior: smooth;
 }
 .parallax_one {
   /* The image used */
-  //background-image: url('img_parallax.jpg');
   background-image: url('../public/a.webp');
 
   /* Full height */
-  height: 100%; 
+  height: 200px; 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  -webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out;
 }
 
 .h1_advert2{
@@ -497,14 +501,18 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   height:300px;
   width: 100%;
   background-color: $on-primary-light;
+  scroll-behavior: smooth;
 }
 .parallax_two {
   background-image: url('../public/b.webp');
-  height: 100%; 
+  height: 300px; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
+  width:100%;
+  -webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out;
 }
 .h1_advert3{
   margin:2rem auto 2rem;
