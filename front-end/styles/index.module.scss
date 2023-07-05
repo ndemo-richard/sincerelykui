@@ -353,7 +353,7 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
 }
 .parallax_one {
   /* The image used */
-  background-image: url('../public/a.webp');
+  /*background-image: url('../public/a.webp');*/
 
   /* Full height */
   height: 200px; 
@@ -504,7 +504,7 @@ transition: background-image 0.2s ease-in-out;
   scroll-behavior: smooth;
 }
 .parallax_two {
-  background-image: url('../public/b.webp');
+  /*background-image: url('../public/b.webp');*/
   height: 300px; 
   background-attachment: fixed;
   background-position: center;
