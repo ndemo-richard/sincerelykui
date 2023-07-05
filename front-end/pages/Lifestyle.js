@@ -98,6 +98,8 @@ const Lifestyle =({Lifestyle, intro_post}) =>(
         Lifestyle,
         intro_post
         
-      }
+      },
+      //nextjs will try to re-generate the page
+      revalidate:10, //in seconds
     };
   }

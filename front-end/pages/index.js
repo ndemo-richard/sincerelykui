@@ -199,6 +199,8 @@ export async function getStaticProps() {
         lifestyle,
         foodRecipe,
         
-      }
+      },
+      //nextjs will try to re-generate the page
+      revalidate:10, //in seconds
     };
   }

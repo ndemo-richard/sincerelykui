@@ -98,6 +98,8 @@ const foodRecipe =({foodRecipe, intro_post}) =>(
         foodRecipe,
         intro_post
         
-      }
+      },
+      //nextjs will try to re-generate the page
+      revalidate:10, //in seconds
     };
   }
