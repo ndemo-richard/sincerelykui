@@ -117,9 +117,8 @@ export const getServerSideProps = async pageContext =>{
                 comments:post.comments,
                 _id:post._id
 
-            },
-            //nextjs will try to re-generate the page
-        revalidate:10, //in seconds
+            }
+            
         }
     }
 
