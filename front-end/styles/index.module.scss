@@ -333,13 +333,16 @@ background-image:linear-gradient(to bottom, rgba(29,30,35, 2), rgba(0, 0, 0, 0.4
   width: 100%;
   padding-left: 6rem;
   padding-right: 0;
+
 }
   
 .section_post{
   max-width: calc(100vw - 50px);
   height:30rem;
   width:28%;
+  padding: 0rem 1rem 0.5rem 1rem;
   cursor: pointer;
+  background-color: antiquewhite;
 }
 
 .advert2_wrapper{
