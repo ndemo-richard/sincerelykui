@@ -12,22 +12,28 @@
 
 .main {
     position: relative;
+    display: block;
     margin:auto;
     width:100%;
     background-color: ivory;
     align-items: center;
+    text-align: center;
 }
-.mainImage{
-    width: 100%;
+.mainImage{ 
+    margin: auto;
+    width: 92%;
+    height: 80vh; 
+    
 }
 .body_wrapper{
     position: relative;
     margin: auto;
     margin-bottom: 2rem;
-    width:60%;
+    width:70%;
     background-color: ivory;
-    margin-top:-5rem;
-    padding-top: 8rem;
+    margin-top:-12rem;
+    padding: 2rem;
+    padding-top: 6rem;
     
 }
 .post_title{
@@ -125,6 +131,7 @@
     }
     .mainImage{
         width: 100%;
+        max-height: 40vh;
     }
     .body_wrapper{
         width:96%;
