@@ -63,11 +63,17 @@
     display: block;
     width:50%;
     margin: auto;
+    color: white;
     font-family: $base-font;
     font-size: 16px;
     text-align: center;
     line-height: 1.56;
-
+    background:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../public/a.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
   }
 
   @media (max-width: 768px) {
