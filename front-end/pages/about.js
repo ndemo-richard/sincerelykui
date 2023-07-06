@@ -17,7 +17,7 @@ const about =()=>(
       <section className={styles.module_body}>
         <div className={styles.body_h1}>About Kui</div>
         <div className={styles.body_wrapper}>
-        <div className={styles.mainImage_intro}><img  src='/kui.jpeg' alt="kui photo"  /></div>
+        
         <div className={styles.body_content}>
            <p>Heey!</p>
 <p>I’m Kui</p>
@@ -29,7 +29,9 @@ trying to make us something else?</p>
 <p>I’m here to help you become FEARLESS AUTHENTIC; to be yourself and live a life that not only looks
 good on the outside but also feels good on the inside. To be REAL, be true to your values regardless of
 what the society and others think or expect of you!</p>
+<img src='/beyourself.webp' alt='morivation'/>
         </div>
+        <div className={styles.mainImage_intro}><img  src='/kui.jpeg' alt="kui photo"  /></div>
         </div>
       </section>
         </div>
