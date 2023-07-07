@@ -29,8 +29,7 @@ export default function Form ({_id}) {
   if (hasSubmitted) {
     return (
     <>
-      <h3>Thanks for your comment!</h3>
-      <p>Awaiting approval from the admin</p>
+      <p>Your comment is awaiting moderation</p>
       <ul>
         <li>
           Name: {formData.name} <br />
