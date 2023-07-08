@@ -64,7 +64,9 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
              </div>
               <Date dateString={publishedAt}/>
               </div>
+              <div class="shareaholic-canvas" data-app="total_share_count"  ></div>
               <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="33127216"></div>
+
 
 
                 </div>
