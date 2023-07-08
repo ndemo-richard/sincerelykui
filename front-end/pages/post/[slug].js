@@ -37,6 +37,7 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
             <Head>
                 <title>{title}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
             </Head>
         <div className={styles.container}>
 
@@ -59,6 +60,7 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
              </div>
               <Date dateString={publishedAt}/>
               </div>
+              <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="33127216"></div>
 
 
                 </div>
