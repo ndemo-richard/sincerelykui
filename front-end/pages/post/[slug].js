@@ -11,6 +11,8 @@ import Comments from '../../components/comments';
 import Form from '../../components/form';
 import { useRouter } from 'next/router';
 
+import DisqusComments from '../../components/DisqusComments';
+
 function urlFor (source) {
     return imageUrlBuilder(client).image(source)
   }
@@ -72,6 +74,7 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
                 </div>
                
               <div className={styles.commentContainer}>
+                <DisqusComments/>
                  <div>
                  <Comments comments={comments} />
                  </div>
