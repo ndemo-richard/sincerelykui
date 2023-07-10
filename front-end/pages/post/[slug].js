@@ -75,14 +75,13 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
                
               <div className={styles.commentContainer}>
                 <DisqusComments/>
-                 <div>
+                {/*} <div>
                  <Comments comments={comments} />
                  </div>
                  <div>
                  <Form _id={_id} />
-                 </div>
-
-                  </div>
+             </div>*/}
+             </div>
             </div>
             <div>
 
