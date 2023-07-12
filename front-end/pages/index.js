@@ -26,9 +26,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
     
     <div className={styles.wrapper}>
       <section className={styles.module_header}>
-      <div className={styles.logo}>
-      <img src="/logo.png" alt="logo" />
-      </div>
+      
       <div className={styles.hook}></div>
       </section>
 

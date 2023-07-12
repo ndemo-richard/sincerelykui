@@ -27,6 +27,19 @@
 
   cursor: pointer;
 }
+.logo{
+  position: relative;
+  margin: auto;
+  width: fit-content;
+
+  img{
+   //background-color: green;
+   padding-top: 1rem;
+   width:16rem;
+   height:5rem;  
+  }
+
+}
 @media (max-width:768px){
    .Header{
 	   display:none;

@@ -5,9 +5,11 @@ import Link from "next/link";
 import styles from "../styles/Header.module.scss";
 
 const Header = props => (
-	<Link href="/" passHref>
-	<div></div>
-	</Link>
+	
+	<div className={styles.logo}>
+      <img src="/logo.png" alt="logo" />
+      </div>
+	
 
 );
 

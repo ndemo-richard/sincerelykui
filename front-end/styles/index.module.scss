@@ -14,27 +14,6 @@
   scroll-behavior: smooth;
   //height: 100vh;
 }
-.module_header{
-  position: relative;
-  display: block;
-  width: 100%;
-  height:5rem;
-  padding-top: 1rem;
-  z-index: 9;
-  background-color: $brand-secondary;
-}
-.logo{
-  position: relative;
-  margin: auto;
-  width: fit-content;
-
-  img{
-   //background-color: green;
-   width:16rem;
-   height:5rem;  
-  }
-
-}
 .module_promo{
   display: flex;
   //gap:1rem;
@@ -44,8 +23,7 @@
   height:30rem;
   //padding: 3rem 3rem 0rem;
   padding: 3rem;
- 
-  
+  padding-top: 2rem;
 }
 .one{
   width:50%;
@@ -566,17 +544,6 @@ transition: background-image 0.2s ease-in-out;
     position: relative;
     width:100%;
     //height: 100vh;
-  }
-  .module_header{
-    padding-top: 1rem;
-  }
-
-  .logo{  
-    img{
-     width:14rem;
-     height:6rem;  
-    }
-  
   }
   .module_promo{
     position: relative;

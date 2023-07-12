@@ -19,10 +19,9 @@ const Layout = props =>{
 <script data-cfasync="false" async src="https://cdn.shareaholic.net/assets/pub/shareaholic.js"></script>
 
             </Head>
-         
+            <Header appTitle={appTitle}/>
          <NavBar/>
-
-        <Header appTitle={appTitle}/>
+        
         <div className={styles.Content}>{props.children}</div>
         
         <Footer footer={props.children}/>

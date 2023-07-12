@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from '../styles/NavBar.module.scss';
 const Navbar = () => (
+<>
 
-
+ <div className={styles.h_name}></div>
 <div className={styles.nav}>
     <input className={styles.menu_toggle} type="checkbox" id="menu-toggle" placeholder='lorem ipsum'/>
   <label className={styles.mobile_menu_label} htmlFor="menu-toggle">
@@ -12,7 +13,7 @@ const Navbar = () => (
 			<span></span>
 		</div>
   </label>
-
+ 
   <ul className={styles.menu}>
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
@@ -20,8 +21,10 @@ const Navbar = () => (
     <li><a href="/Lifestyle">Lifestyle</a></li>
     <li><a href="/foodRecipe">Food Recipe</a></li>
   </ul>
-
+  
 </div>
+<div className={styles.h_name}></div>
+</>
 );
 
 export default Navbar
