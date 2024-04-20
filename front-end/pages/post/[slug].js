@@ -49,9 +49,10 @@ export const Post = ({ _id, title, body, image,publishedAt, authorImage, authorN
 
             <div className={styles.main}>
                 
-                {imageUrl && <img className={ styles.mainImage} src={imageUrl} />}
+               
                 <div className={styles.body_wrapper}>
                 <h1 className={styles.post_title}>{title}</h1>
+                {imageUrl && <img className={ styles.mainImage} src={imageUrl} />}
                <div className={styles.body}>
                    <BlockContent blocks={body} />
                 </div>
