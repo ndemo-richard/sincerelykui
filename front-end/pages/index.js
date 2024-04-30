@@ -74,7 +74,7 @@ const Index = ({ mentalHealth,lifestyle,foodRecipe,newPost })=>(
       </div>
       <div className={styles.sidePannel}>
         <div className={styles.sideWrapper}>
-          <h1>something amazing is comming here..</h1>
+          <h1>something amazing is coming here..</h1>
 
         </div>
       </div>
