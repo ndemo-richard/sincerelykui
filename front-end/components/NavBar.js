@@ -17,9 +17,9 @@ const Navbar = () => (
   <ul className={styles.menu}>
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
-    <li><a href="/mentalHealth">Mental-Health</a></li>
+    {/*<li><a href="/mentalHealth">Mental-Health</a></li>
     <li><a href="/Lifestyle">Lifestyle</a></li>
-    <li><a href="/foodRecipe">Food Recipe</a></li>
+<li><a href="/foodRecipe">Food Recipe</a></li>*/}
   </ul>
   
 </div>

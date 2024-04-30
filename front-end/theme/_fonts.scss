@@ -6,7 +6,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 @import '~@fontsource/mrs-saint-delafield';
 @import "~@fontsource/tangerine";
 @import "~@fontsource/happy-monkey";
@@ -21,7 +24,12 @@ $core-font: "Forum", cursive;
 $title-font: "Rakkas", cursive;
 $base-font:"Forum",cursive;
 $fun-font:"Happy Monkey", cursive;
-$tan-font:"Tangerine" ,cursive;
+$tan-font:"tangerine", cursive;
 $sig-font:"Mrs Saint Delafield", cursive;
 $article-title-font:"Raleway",cursive;
 $nav-base-font:'Source Sans Pro', sans-serif;
+
+/*dev fonts*/
+$dev-title:"Montserrat",sans-serif;
+$dev-header:"Crimson Text",sans-serif;
+$dev-body:"Lora",sans-serif

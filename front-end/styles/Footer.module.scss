@@ -11,12 +11,12 @@
   margin: auto;
   padding:2rem 1rem 0 3rem;
 
-  background: $brand-primary;
+  background: #b8a695;
 }
 
 .copyright {
   position: relative;
-  width: 10rem;
+  width: 14rem;
   height: 2rem;
   position: relative;
   display: block;
@@ -26,7 +26,10 @@
   font-weight: bold;
   color: $on-secondary;
   text-transform: uppercase;
+  
 }
+
+
 @media screen and (max-width: 768px) {
   .Footer {
     display: block;
