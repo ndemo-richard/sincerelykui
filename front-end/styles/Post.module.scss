@@ -96,6 +96,27 @@
 }
 
 //for post
+.col1{
+    width: 100%;
+    height: 10rem;
+    margin: auto;
+}
+.col1 h1{
+    font-family: $dev-body;
+    font-size: 14px;
+    text-align: start;
+}
+.relatedPost{
+}
+.postImage{
+    width: 4rem;
+    height: 4rem;
+}
+.rel_title{
+    font-size: 12px;
+    font-family: $dev-body;
+
+}
 .commentContainer{
     margin-top: 10rem;
     border-top: 1px solid $brand-secondary-darker;
